@@ -15,7 +15,7 @@ import javafx.stage.Stage;
 
 /**
  *
- * @author IAMLUX
+ * @author IAMLUX this will be the first step
  */
 public class XAmp extends Application {
 
