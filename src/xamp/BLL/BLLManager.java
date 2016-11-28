@@ -9,6 +9,6 @@ package xamp.BLL;
  *
  * @author IAMLUX
  */
-public class DLLManager {
+public class BLLManager {
 
 }
