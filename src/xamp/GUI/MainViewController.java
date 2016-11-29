@@ -46,6 +46,12 @@ public class MainViewController implements Initializable {
     private ImageView fastFrwButton;
     @FXML
     private ImageView playButton;
+<<<<<<< HEAD
+=======
+  
+  
+  
+>>>>>>> origin/master
 
     /**
      * Initializes the controller class.
@@ -53,12 +59,21 @@ public class MainViewController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+<<<<<<< HEAD
     }
+=======
+    }    
+    
+>>>>>>> origin/master
 
     @FXML
     public void initialize(MouseEvent event) 
     {
+<<<<<<< HEAD
         XAmp.playSong();
+=======
+       
+>>>>>>> origin/master
     }
 
 }
