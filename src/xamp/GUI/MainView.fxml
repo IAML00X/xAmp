@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="752.0" prefWidth="1057.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="xamp.GUI.MainViewController">
+<AnchorPane id="AnchorPane" accessibleRole="BUTTON" onMouseMoved="#initialize" prefHeight="752.0" prefWidth="1057.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="xamp.GUI.MainViewController">
    <children>
       <ListView layoutX="23.0" layoutY="133.0" prefHeight="541.0" prefWidth="281.0" />
       <Button fx:id="addPlaylist" layoutX="24.0" layoutY="688.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="83.0" text="New" />
@@ -45,7 +45,7 @@
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <Slider layoutX="85.0" layoutY="82.0" prefHeight="18.0" prefWidth="159.0" />
+      <Slider fx:id="volumeSlider" layoutX="84.0" layoutY="82.0" onMouseMoved="#initialize" prefHeight="18.0" prefWidth="159.0" />
       <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="56.0" layoutY="81.0">
          <image>
             <Image url="@sound2.png" />
@@ -74,27 +74,27 @@
                </image>
             </ImageView>
          </graphic></Label>
-      <Label layoutX="49.0" layoutY="20.0">
+      <Label accessibleRole="BUTTON" layoutX="49.0" layoutY="20.0">
          <graphic>
-            <ImageView fx:id="fastBcwButton" fitHeight="35.0" fitWidth="35.0" onMouseClicked="#initialize">
+            <ImageView fx:id="fastBcwButton" accessibleRole="BUTTON" fitHeight="35.0" fitWidth="35.0" onMouseClicked="#initialize">
                <image>
                   <Image url="@fast-backward.png" />
                </image>
             </ImageView>
          </graphic>
       </Label>
-      <Label layoutX="970.0" layoutY="33.0">
+      <Label accessibleRole="BUTTON" layoutX="970.0" layoutY="33.0">
          <graphic>
-            <ImageView fx:id="searchButton" fitHeight="40.0" fitWidth="40.0" onMouseClicked="#initialize">
+            <ImageView fx:id="searchButton" accessibleRole="BUTTON" fitHeight="40.0" fitWidth="40.0" onMouseClicked="#initialize">
                <image>
                   <Image url="@ses.png" />
                </image>
             </ImageView>
          </graphic>
       </Label>
-      <Label layoutX="244.0" layoutY="25.0">
+      <Label accessibleRole="BUTTON" layoutX="244.0" layoutY="25.0">
          <graphic>
-            <ImageView fx:id="fastFrwButton" fitHeight="35.0" fitWidth="35.0" onMouseClicked="#initialize">
+            <ImageView fx:id="fastFrwButton" accessibleRole="BUTTON" fitHeight="35.0" fitWidth="35.0" onMouseClicked="#initialize">
                <image>
                   <Image url="@fast-forward-.png" />
                </image>

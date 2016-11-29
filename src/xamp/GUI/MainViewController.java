@@ -7,12 +7,16 @@ package xamp.GUI;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.beans.InvalidationListener;
+import javafx.beans.Observable;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Slider;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.media.MediaPlayer;
 
 
 /**
@@ -46,24 +50,34 @@ public class MainViewController implements Initializable {
     private ImageView fastFrwButton;
     @FXML
     private ImageView playButton;
-  
-  
-  
-
-    /**
-     * Initializes the controller class.
-     */
-    @Override
-    public void initialize(URL url, ResourceBundle rb) 
-    {
-        // TODO
-    }    
+    @FXML
+    private Slider volumeSlider;
     
+    private MediaPlayer mp;
+    
+
 
     @FXML
     private void initialize(MouseEvent event) 
     {
        
+    }
+
+    /*
+    * setting the value for the volumeSlider. 
+    * the value is 1 so therefor we have to *100
+    */
+    @Override
+    public void initialize(URL location, ResourceBundle resources) 
+    {
+        volumeSlider.setValue(mp.getVolume() * 100);
+        volumeSlider.valueProperty().addListener(new InvalidationListener() {
+            @Override
+            public void invalidated(Observable observable) {
+                    mp.setVolume(volumeSlider.getValue()/100);//here we convert the value and therefor devide it by 100
+            }
+        });
+    
     }
     
 }
