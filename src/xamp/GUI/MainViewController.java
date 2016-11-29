@@ -47,11 +47,8 @@ public class MainViewController implements Initializable {
     @FXML
     private ImageView playButton;
   
-    
-   
-    
-    
-   
+  
+  
 
     /**
      * Initializes the controller class.
@@ -61,11 +58,12 @@ public class MainViewController implements Initializable {
     {
         // TODO
     }    
+    
 
     @FXML
     private void initialize(MouseEvent event) 
     {
-
+       
     }
     
 }
