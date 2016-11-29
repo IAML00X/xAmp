@@ -5,27 +5,29 @@
  */
 package xamp.BE;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author IAMLUX
  */
 public class Playlist {
 
-    private Song[] songs;
+    private List<Song> songList;
     private String playlistName;
     private int count;
 
     public Playlist() {
-        songs = new Song[10];
-        count = 0;
-    }
-
-    public String getPlaylistName() {
-        return playlistName;
+        songList = new ArrayList<Song>();
     }
 
     public void setPlaylistName() {
         this.playlistName = playlistName;
+    }
+
+    public String getPlaylistName() {
+        return playlistName;
     }
 
 }
