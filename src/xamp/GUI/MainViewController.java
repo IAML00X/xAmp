@@ -47,19 +47,19 @@ public class MainViewController implements Initializable {
     @FXML
     private ImageView fastFrwButton;
     @FXML
-    private ImageView playButton;
+    public ImageView playButton;
     @FXML
     private Slider volumeSlider;
 
     private MediaPlayer mp;
 
     @Override
-    public void initialize(URL location, ResourceBundle resources) {
+    public void initialize(URL url, ResourceBundle rb) {
 
     }
 
     @FXML
-    private void initialize(MouseEvent event) {
+    public void initialize(MouseEvent event) {
         XAmp.playSong();
     }
 
