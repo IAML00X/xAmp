@@ -13,7 +13,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-
+import xamp.XAmp;
 
 /**
  * FXML Controller class
@@ -46,26 +46,17 @@ public class MainViewController implements Initializable {
     private ImageView fastFrwButton;
     @FXML
     private ImageView playButton;
-  
-    
-   
-    
-    
-   
 
     /**
      * Initializes the controller class.
      */
     @Override
-    public void initialize(URL url, ResourceBundle rb) 
-    {
+    public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
 
     @FXML
-    private void initialize(MouseEvent event) 
     {
-
     }
-    
+
 }
