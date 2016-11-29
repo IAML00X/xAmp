@@ -5,10 +5,13 @@
  */
 package xamp;
 
+import java.nio.file.Paths;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 
 /**
@@ -18,23 +21,27 @@ import javafx.stage.Stage;
 public class XAmp extends Application {
 
     @Override
-    public void start(Stage primaryStage) throws Exception 
-    {
+    public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/xamp/GUI/MainView.fxml"));
-        
+
         Scene scene = new Scene(root);
-        
+
         primaryStage.setScene(scene);
         primaryStage.show();
- 
+
     }
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) 
-    {
+    public static void main(String[] args) {
         launch(args);
+    }
+
+    public static void playSong() {
+        Media media = new Media(Paths.get("test.mp3").toUri().toString()); //replace /Movies/test.mp3 with your file
+        MediaPlayer player = new MediaPlayer(media);
+        player.play();
     }
 
 }
