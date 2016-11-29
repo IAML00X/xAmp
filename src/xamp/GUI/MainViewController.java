@@ -56,7 +56,9 @@ public class MainViewController implements Initializable {
     }
 
     @FXML
+    public void initialize(MouseEvent event) 
     {
+        XAmp.playSong();
     }
 
 }
