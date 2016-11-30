@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" accessibleRole="BUTTON" onMouseMoved="#initialize" prefHeight="752.0" prefWidth="1057.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="xamp.GUI.MainViewController">
+<AnchorPane id="AnchorPane" accessibleRole="BUTTON" prefHeight="752.0" prefWidth="1057.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="xamp.GUI.MainViewController">
    <children>
       <ListView layoutX="23.0" layoutY="133.0" prefHeight="541.0" prefWidth="281.0" />
       <Button fx:id="addPlaylist" layoutX="24.0" layoutY="688.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="83.0" text="New" />
@@ -66,9 +66,9 @@
             <Image url="@playlist%20icon.png" />
          </image>
       </ImageView>
-      <Label layoutX="125.0" layoutY="7.0" prefHeight="70.0" prefWidth="70.0">
+      <Label fx:id="playButton" layoutX="125.0" layoutY="7.0" onMouseClicked="#initialize" prefHeight="70.0" prefWidth="70.0">
          <graphic>
-            <ImageView fx:id="playButton" accessibleRole="BUTTON" fitHeight="70.0" fitWidth="70.0" onMouseClicked="#initialize">
+            <ImageView accessibleRole="BUTTON" fitHeight="70.0" fitWidth="70.0" onMouseClicked="#initialize">
                <image>
                   <Image url="@play.png" />
                </image>
