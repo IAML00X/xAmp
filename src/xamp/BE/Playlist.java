@@ -14,6 +14,7 @@ import java.util.List;
  */
 public class Playlist {
 
+    private int id;
     private List<Song> songList;
     private String playlistName;
     private int count;
@@ -26,8 +27,28 @@ public class Playlist {
         this.playlistName = playlistName;
     }
 
+    public List<Song> getSongList() {
+        return songList;
+    }
+
+    public void setSongList(List<Song> songList) {
+        this.songList = songList;
+    }
+
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
+    }
+
     public String getPlaylistName() {
         return playlistName;
+    }
+
+    public int getId() {
+        return id;
     }
 
 }
