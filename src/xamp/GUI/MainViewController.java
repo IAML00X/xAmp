@@ -13,7 +13,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.control.TextField;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.media.MediaPlayer;
 import xamp.XAmp;
@@ -42,11 +41,11 @@ public class MainViewController implements Initializable {
     @FXML
     private TextField searchFilter;
     @FXML
-    private ImageView fastBcwButton;
+    private Label fastBcwButton;
     @FXML
-    private ImageView searchButton;
+    private Label searchButton;
     @FXML
-    private ImageView fastFrwButton;
+    private Label fastFrwButton;
     @FXML
     public Label playButton;
     @FXML
@@ -68,4 +67,8 @@ public class MainViewController implements Initializable {
     * setting the value for the volumeSlider. 
     * the value is 1 so therefor we have to *100
      */
+    
+
+    
+
 }
