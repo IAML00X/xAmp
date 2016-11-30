@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package xamp.DAL;
+package xamp.BLL;
 
 /**
  *
  * @author IAMLUX
  */
-public class DALManager {
+public class PlaylistManager {
 
 }
