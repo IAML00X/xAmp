@@ -30,10 +30,6 @@ public class XAmp extends Application {
         primaryStage.show();
 
     }
-    /*
-    * Make the new and edit buttons in MainView.fxml open addAndEdit.fxml. 
-    */
-    
 
 
     /**
