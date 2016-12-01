@@ -5,16 +5,20 @@
  */
 package xamp.GUI;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.Slider;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.media.MediaPlayer;
+import javafx.stage.Stage;
 import xamp.XAmp;
 
 /**
@@ -48,27 +52,39 @@ public class MainViewController implements Initializable {
     private Label fastFrwButton;
     @FXML
     public Label playButton;
-    @FXML
-    private Slider volumeSlider;
-
-    private MediaPlayer mp;
+   
+ 
+    
+ 
 
     @Override
-    public void initialize(URL url, ResourceBundle rb) {
+    public void initialize(URL url, ResourceBundle rb) 
+    {
 
     }
 
     @FXML
-    public void initialize(MouseEvent event) {
+    public void initialize(MouseEvent event) 
+    {
         XAmp.playSong();
     }
 
-    /*
-    * setting the value for the volumeSlider. 
-    * the value is 1 so therefor we have to *100
-     */
+    @FXML
+    public void handleOnButtonAction(ActionEvent event) throws IOException
+    {
+        
+       FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("AddSongView.fxml"));
+       Parent root1 = (Parent) fxmlLoader.load();
+       Stage stage = new Stage();
+       stage.setTitle("Add Song Window");
+       stage.setScene(new Scene(root1));
+       stage.show();
+ 
+          
+        
+    }
     
-
+  
     
 
 }

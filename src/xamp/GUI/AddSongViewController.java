@@ -14,7 +14,7 @@ import javafx.fxml.Initializable;
  *
  * @author MissJ
  */
-public class AddSongView implements Initializable {
+public class AddSongViewController implements Initializable {
 
     /**
      * Initializes the controller class.
