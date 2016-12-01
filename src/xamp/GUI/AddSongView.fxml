@@ -11,7 +11,7 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="379.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="xamp.GUI.AddAndEditController">
+<AnchorPane prefHeight="379.0" prefWidth="620.0" id="AnchorPane" xmlns:fx="http://javafx.com/fxml/1" fx:controller="xamp.GUI.AddSongViewController">
    <children>
       <TextField layoutX="77.0" layoutY="174.0" prefHeight="31.0" prefWidth="209.0" />
       <TextField layoutX="77.0" layoutY="242.0" prefHeight="31.0" prefWidth="209.0" />
@@ -57,7 +57,7 @@
             <Font name="Calibri" size="17.0" />
          </font>
       </Button>
-      <Button layoutX="388.0" layoutY="336.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="64.0" text="Save">
+      <Button layoutX="387.0" layoutY="336.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="64.0" text="Save">
          <textFill>
             <LinearGradient endX="0.9174757281553398" endY="1.0" startX="1.0" startY="0.14563106796116504">
                <stops>
