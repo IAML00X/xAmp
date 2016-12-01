@@ -5,10 +5,15 @@
  */
 package xamp.GUI;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
@@ -18,6 +23,7 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.media.MediaPlayer;
+import javafx.stage.Stage;
 import xamp.BLL.SongManager;
 
 /**
@@ -79,6 +85,20 @@ public class MainViewController implements Initializable {
     @FXML
     public void srcBtnClicked(MouseEvent event) {
         System.out.println("OHAI!");
+    }
+        @FXML
+    public void handleOnButtonAction(ActionEvent event) throws IOException
+    {
+        
+       FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("AddSongView.fxml"));
+       Parent root1 = (Parent) fxmlLoader.load();
+       Stage stage = new Stage();
+       stage.setTitle("Add Song Window");
+       stage.setScene(new Scene(root1));
+       stage.show();
+ 
+          
+        
     }
 
     @FXML
