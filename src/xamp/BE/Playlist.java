@@ -14,10 +14,9 @@ import java.util.List;
  */
 public class Playlist {
 
-    private int id;
     private List<Song> songList;
     private String playlistName;
-    private int count;
+    private int length;
 
     public Playlist() {
         songList = new ArrayList<Song>();
@@ -35,20 +34,19 @@ public class Playlist {
         this.songList = songList;
     }
 
-    public int getCount() {
-        return count;
+    public void setLength(int h, int m, int s) {
+        length = (h * 3600 + m * 60 + s);
+        if (h == 0) {
+            length = (m * 60 + s);
+        }
     }
 
-    public void setCount(int count) {
-        this.count = count;
+    public int getLength() {
+        return length;
     }
 
     public String getPlaylistName() {
         return playlistName;
-    }
-
-    public int getId() {
-        return id;
     }
 
 }

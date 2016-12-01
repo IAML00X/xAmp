@@ -13,9 +13,12 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.media.MediaPlayer;
-import xamp.XAmp;
+import xamp.BLL.SongManager;
 
 /**
  * FXML Controller class
@@ -23,6 +26,8 @@ import xamp.XAmp;
  * @author MissJ
  */
 public class MainViewController implements Initializable {
+
+    private SongManager sm;
 
     @FXML
     private Button addPlaylist;
@@ -52,23 +57,31 @@ public class MainViewController implements Initializable {
     private Slider volumeSlider;
 
     private MediaPlayer mp;
+    @FXML
+    private ImageView searchBtn;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
     }
 
-    @FXML
-    public void initialize(MouseEvent event) {
-        XAmp.playSong();
-    }
-
     /*
     * setting the value for the volumeSlider. 
     * the value is 1 so therefor we have to *100
      */
-    
+    @FXML
+    public void handleEnterPressed(KeyEvent event) {
+        if (event.getCode() == KeyCode.ENTER) {
+            System.out.println("Heya!");
+        }
+    }
 
-    
+    @FXML
+    public void srcBtnClicked(MouseEvent event) {
+        System.out.println("OHAI!");
+    }
 
+    @FXML
+    private void initialize(MouseEvent event) {
+    }
 }
