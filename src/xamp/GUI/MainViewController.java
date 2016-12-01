@@ -8,6 +8,7 @@ package xamp.GUI;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -87,7 +88,7 @@ public class MainViewController implements Initializable {
         System.out.println("OHAI!");
     }
         @FXML
-    public void handleOnButtonAction(ActionEvent event) throws IOException
+    public void handleOnButtonActionSong (ActionEvent event) throws IOException
     {
         
        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("AddSongView.fxml"));
@@ -100,8 +101,26 @@ public class MainViewController implements Initializable {
           
         
     }
+    public void handleOnButtonActionPlaylist (ActionEvent event) throws IOException
+    {
+        
+       FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("AddPlaylistView.fxml"));
+       Parent root1 = (Parent) fxmlLoader.load();
+       Stage stage = new Stage();
+       stage.setTitle("Add Playlist Window");
+       stage.setScene(new Scene(root1));
+       stage.show(); 
+        
+    }
 
     @FXML
     private void initialize(MouseEvent event) {
     }
+    
+    public void closeApp(ActionEvent event)
+    {
+        Platform.exit();
+    }
+    
+    
 }

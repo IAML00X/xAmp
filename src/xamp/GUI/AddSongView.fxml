@@ -44,7 +44,7 @@
             <Font name="Calibri" size="16.0" />
          </font>
       </Button>
-      <Button layoutX="528.0" layoutY="336.0" mnemonicParsing="false" text="Cancel">
+      <Button fx:id="closeButton" layoutX="528.0" layoutY="336.0" mnemonicParsing="false" onAction="#closeButtonAction" text="Cancel">
          <textFill>
             <LinearGradient endX="0.9174757281553398" endY="1.0" startX="1.0" startY="0.14563106796116504">
                <stops>

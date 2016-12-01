@@ -17,21 +17,19 @@ import javafx.stage.Stage;
  *
  * @author MissJ
  */
-public class AddSongViewController implements Initializable {
-    
+public class AddPlaylistViewController implements Initializable {
+
     @FXML
     private javafx.scene.control.Button closeButton;
-
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }  
-
+    }    
     
-    public void closeButtonAction (ActionEvent event)
+        public void closeButtonPlaylist (ActionEvent event)
     {
        Stage stage = (Stage) closeButton.getScene().getWindow();
        stage.close();
