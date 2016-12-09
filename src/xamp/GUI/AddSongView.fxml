@@ -44,7 +44,7 @@
             <Font name="Calibri" size="17.0" />
          </font>
       </Button>
-      <Button fx:id="saveSong" layoutX="387.0" layoutY="336.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="64.0" text="Save">
+      <Button fx:id="saveSong" layoutX="387.0" layoutY="336.0" mnemonicParsing="false" onAction="#saveSong" prefHeight="31.0" prefWidth="64.0" text="Save">
          <textFill>
             <LinearGradient endX="0.9174757281553398" endY="1.0" startX="1.0" startY="0.14563106796116504">
                <stops>

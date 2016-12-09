@@ -199,12 +199,12 @@
           <TableColumn prefWidth="154.0" text="Length" />
         </columns>
       </TableView>
-      <TableView layoutX="525.0" layoutY="146.0" prefHeight="522.0" prefWidth="439.0">
+      <TableView fx:id="songTbl" layoutX="525.0" layoutY="146.0" prefHeight="522.0" prefWidth="439.0">
         <columns>
-          <TableColumn prefWidth="99.0" text="Song" />
-          <TableColumn prefWidth="115.0" text="Artist" />
-            <TableColumn prefWidth="114.0" text="Album" />
-            <TableColumn prefWidth="110.0" text="Length" />
+          <TableColumn fx:id="colSong" prefWidth="99.0" text="Song" />
+          <TableColumn fx:id="colArtist" prefWidth="115.0" text="Artist" />
+            <TableColumn fx:id="colAlbum" prefWidth="114.0" text="Album" />
+            <TableColumn fx:id="colLength" prefWidth="110.0" text="Length" />
         </columns>
       </TableView>
       <ImageView fx:id="searchBtn" fitHeight="40.0" fitWidth="40.0" layoutX="924.0" layoutY="34.0">

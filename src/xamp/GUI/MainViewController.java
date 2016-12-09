@@ -18,14 +18,19 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
+import xamp.BE.Song;
 import xamp.BLL.SongManager;
+import xamp.GUI.model.SongModel;
 
 /**
  * FXML Controller class
@@ -67,9 +72,26 @@ public class MainViewController implements Initializable {
     @FXML
     private ImageView searchBtn;
 
+    private SongModel songmodel;
+    @FXML
+    private TableView<Song> songTbl;
+    @FXML
+    private TableColumn<Song, String> colSong;
+    @FXML
+    private TableColumn<Song, String> colArtist;
+    @FXML
+    private TableColumn<Song, String> colAlbum;
+    @FXML
+    private TableColumn<Song, String> colLength;
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-
+        songmodel = new SongModel();
+        songTbl.setItems(songmodel.getSongs());
+        colSong.setCellValueFactory(
+                new PropertyValueFactory("name"));
+        colArtist.setCellValueFactory(
+                new PropertyValueFactory("artist"));
     }
 
     /*
@@ -87,40 +109,40 @@ public class MainViewController implements Initializable {
     public void srcBtnClicked(MouseEvent event) {
         System.out.println("OHAI!");
     }
-        @FXML
-    public void handleOnButtonActionSong (ActionEvent event) throws IOException
-    {
-        
-       FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("AddSongView.fxml"));
-       Parent root1 = (Parent) fxmlLoader.load();
-       Stage stage = new Stage();
-       stage.setTitle("");
-       stage.setScene(new Scene(root1));
-       stage.show();
- 
-          
-        
+
+    @FXML
+    public void handleOnButtonActionSong(ActionEvent event) throws IOException {
+
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("AddSongView.fxml"));
+        Parent root1 = (Parent) fxmlLoader.load();
+        AddSongViewController controller = fxmlLoader.getController();
+        controller.setModel(songmodel);
+        Stage stage = new Stage();
+        stage.setTitle("");
+        stage.setScene(new Scene(root1));
+        stage.show();
+
     }
-    public void handleOnButtonActionPlaylist (ActionEvent event) throws IOException
-    {
-        
-       FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("AddPlaylistView.fxml"));
-       Parent root1 = (Parent) fxmlLoader.load();
-       Stage stage = new Stage();
-       stage.setTitle("");
-       stage.setScene(new Scene(root1));
-       stage.show(); 
-        
+
+    @FXML
+    public void handleOnButtonActionPlaylist(ActionEvent event) throws IOException {
+
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("AddPlaylistView.fxml"));
+        Parent root1 = (Parent) fxmlLoader.load();
+        Stage stage = new Stage();
+        stage.setTitle("");
+        stage.setScene(new Scene(root1));
+        stage.show();
+
     }
 
     @FXML
     private void initialize(MouseEvent event) {
     }
-    
-    public void closeApp(ActionEvent event)
-    {
+
+    @FXML
+    public void closeApp(ActionEvent event) {
         Platform.exit();
     }
-    
-    
+
 }

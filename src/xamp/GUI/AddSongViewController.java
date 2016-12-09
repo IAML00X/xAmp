@@ -21,7 +21,8 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.stage.Window;
-
+import xamp.BE.Song;
+import xamp.GUI.model.SongModel;
 
 /**
  * FXML Controller class
@@ -29,10 +30,8 @@ import javafx.stage.Window;
  * @author MissJ
  */
 public class AddSongViewController implements Initializable {
-    
- 
-    
-    
+
+    @FXML
     private AnchorPane root;
     @FXML
     private javafx.scene.control.Button closeButton;
@@ -50,103 +49,58 @@ public class AddSongViewController implements Initializable {
     private Desktop desktop = Desktop.getDesktop();
     @FXML
     private TextField songPath;
-    
-    
-    
-   
-    
-    
-    
+
+    private SongModel songmodel;
+
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }  
-    
-    
+    }
 
-    public void addSong()
-    {
+    public void addSong() {
         String path = songPath.getText();
     }
-    
-    
-        @FXML
-    private void chooseFile(ActionEvent event)
-    { 
-        try{
-        FileChooser fileChooser = new FileChooser();
-        Window stage = null;
-        File file = fileChooser.showOpenDialog(stage);
-        songPath.setText(file.getPath());
-        }
-        catch (Exception e)
-                {
-                    
-                }
-        
-     
- 
 
-       
-  
-     
-      
+    @FXML
+    private void chooseFile(ActionEvent event) {
+        try {
+            FileChooser fileChooser = new FileChooser();
+            Window stage = null;
+            File file = fileChooser.showOpenDialog(stage);
+            songPath.setText(file.getPath());
+        } catch (Exception e) {
+
+        }
+
         // here we need a code that can open the documents
-    
     }
 
-    public void start(final Stage stage)
-    {
+    public void start(final Stage stage) {
         stage.setScene(new Scene(root));
         stage.show();
     }
 
-//   // Dont know if we need 
-//    private void printLog(TextArea textArea, List<File> files) 
-//    {
-//        if (files == null || files.isEmpty()) {
-//            return;
-//        }
-//        for (File file : files) {
-//            textArea.appendText(file.getAbsolutePath() + "\n");
-//        }
-//    }
-// // Dont know if we need
-//    private void openFile(File file) 
-//    {
-//        try {
-//            this.desktop.open(file);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
- // dont know if we need
-    public static void main(String[] args) 
-    {
+    public static void main(String[] args) {
         Application.launch(args);
     }
-    
-    
-    
+
     //  Here we save the song we choose 
-    public void saveSong (ActionEvent event)
-    {
-     
-    }
-    
-    
-    
-    
     @FXML
-    public void closeButtonAction (ActionEvent event)
-    {
-       Stage stage = (Stage) closeButton.getScene().getWindow();
-       stage.close();
+    public void saveSong(ActionEvent event) {
+        Song song = new Song(songTitle.getText(), songArtist.getText(), songArtist.getText(), 0, songPath.getText());
+        songmodel.addSong(song);
     }
 
+    @FXML
+    public void closeButtonAction(ActionEvent event) {
+        Stage stage = (Stage) closeButton.getScene().getWindow();
+        stage.close();
+    }
 
-    
+    public void setModel(SongModel model) {
+        songmodel = model;
+    }
 }
