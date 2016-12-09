@@ -10,17 +10,22 @@ package xamp.BE;
  * @author IAMLUX
  */
 public class Song {
+    
+ 
+
+
 
     public String name;
     public String artist;
     public String album;
     public int length;
 
-    public Song(String songName, String artistName, String albumName, int trackLength) {
+    public Song(String songName, String artistName, String albumName, int trackLength, String path) {
         this.name = songName;
         this.artist = artistName;
         this.album = albumName;
         this.length = trackLength;
+      
     }
 
     public void setName(String songName) {
@@ -61,4 +66,6 @@ public class Song {
     public String toString() {
         return "Title: " + getName() + ", Artist: " + getArtist() + ", Album: " + getAlbum() + "Track Length" + getLength();
     }
+    
+
 }
