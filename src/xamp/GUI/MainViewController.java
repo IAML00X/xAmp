@@ -94,7 +94,7 @@ public class MainViewController implements Initializable {
        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("AddSongView.fxml"));
        Parent root1 = (Parent) fxmlLoader.load();
        Stage stage = new Stage();
-       stage.setTitle("Add Song Window");
+       stage.setTitle("");
        stage.setScene(new Scene(root1));
        stage.show();
  
@@ -107,7 +107,7 @@ public class MainViewController implements Initializable {
        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("AddPlaylistView.fxml"));
        Parent root1 = (Parent) fxmlLoader.load();
        Stage stage = new Stage();
-       stage.setTitle("Add Playlist Window");
+       stage.setTitle("");
        stage.setScene(new Scene(root1));
        stage.show(); 
         
