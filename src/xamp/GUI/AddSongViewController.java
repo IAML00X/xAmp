@@ -13,7 +13,6 @@ import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
@@ -98,32 +97,9 @@ public class AddSongViewController implements Initializable {
     
     }
 
-    public void start(final Stage stage)
-    {
-        stage.setScene(new Scene(root));
-        stage.show();
-    }
 
-//   // Dont know if we need 
-//    private void printLog(TextArea textArea, List<File> files) 
-//    {
-//        if (files == null || files.isEmpty()) {
-//            return;
-//        }
-//        for (File file : files) {
-//            textArea.appendText(file.getAbsolutePath() + "\n");
-//        }
-//    }
-// // Dont know if we need
-//    private void openFile(File file) 
-//    {
-//        try {
-//            this.desktop.open(file);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
- // dont know if we need
+
+
     public static void main(String[] args) 
     {
         Application.launch(args);

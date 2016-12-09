@@ -145,7 +145,7 @@
             </LinearGradient>
          </textFill>
       </Label>
-      <Slider fx:id="volumeSlider" layoutX="81.0" layoutY="82.0" prefHeight="18.0" prefWidth="159.0" />
+      <Slider fx:id="volumeSlider" layoutX="95.0" layoutY="82.0" prefHeight="18.0" prefWidth="152.0" />
       <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="56.0" layoutY="81.0">
          <image>
             <Image url="@sound2.png" />
@@ -166,33 +166,10 @@
             <Image url="@playlist%20icon.png" />
          </image>
       </ImageView>
-      <Label fx:id="playButton" layoutX="125.0" layoutY="7.0" onMouseClicked="#initialize" prefHeight="70.0" prefWidth="70.0">
-         <graphic>
-            <ImageView fitHeight="70.0" fitWidth="70.0">
-               <image>
-                  <Image url="@play.png" />
-               </image>
-            </ImageView>
-         </graphic></Label>
-      <Label fx:id="fastBcwButton" layoutX="49.0" layoutY="20.0" onMouseClicked="#initialize">
-         <graphic>
-            <ImageView fitHeight="35.0" fitWidth="35.0">
-               <image>
-                  <Image url="@fast-backward.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Label>
+      <Label fx:id="playButton" layoutX="125.0" layoutY="7.0" onMouseClicked="#initialize" prefHeight="70.0" prefWidth="70.0" />
+      <Label fx:id="fastBcwButton" layoutX="49.0" layoutY="20.0" onMouseClicked="#initialize" />
       <Label fx:id="searchButton" layoutX="970.0" layoutY="33.0" onMouseClicked="#srcBtnClicked" />
-      <Label fx:id="fastFrwButton" layoutX="244.0" layoutY="25.0" onMouseClicked="#initialize">
-         <graphic>
-            <ImageView fitHeight="35.0" fitWidth="35.0">
-               <image>
-                  <Image url="@fast-forward-.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Label>
+      <Label fx:id="fastFrwButton" layoutX="244.0" layoutY="25.0" onMouseClicked="#initialize" />
       <TableView layoutX="24.0" layoutY="146.0" prefHeight="522.0" prefWidth="298.0">
         <columns>
           <TableColumn prefWidth="143.0" text="Playlists " />
@@ -210,6 +187,27 @@
       <ImageView fx:id="searchBtn" fitHeight="40.0" fitWidth="40.0" layoutX="924.0" layoutY="34.0">
          <image>
             <Image url="@ses.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="282.0" layoutY="24.0">
+         <image>
+            <Image url="@fast-forward-.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="34.0" layoutY="25.0">
+         <image>
+            <Image url="@fast-backward.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="83.0" layoutY="5.0">
+         <image>
+            <Image url="@play.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="174.0" layoutY="14.0" prefHeight="18.0" prefWidth="40.0" />
+      <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="184.0" layoutY="10.0">
+         <image>
+            <Image url="@pause-button-icon-44659.png" />
          </image>
       </ImageView>
       
