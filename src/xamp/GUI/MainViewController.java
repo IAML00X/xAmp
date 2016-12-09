@@ -61,14 +61,17 @@ public class MainViewController implements Initializable {
     @FXML
     public Label playButton;
     @FXML
+    private ImageView searchBtn;
+
+    @FXML
     private Slider volumeSlider;
 
     private MediaPlayer mp;
-    @FXML
-    private ImageView searchBtn;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+
+        sm = new SongManager();
 
     }
 
@@ -87,40 +90,53 @@ public class MainViewController implements Initializable {
     public void srcBtnClicked(MouseEvent event) {
         System.out.println("OHAI!");
     }
-        @FXML
-    public void handleOnButtonActionSong (ActionEvent event) throws IOException
-    {
-        
-       FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("AddSongView.fxml"));
-       Parent root1 = (Parent) fxmlLoader.load();
-       Stage stage = new Stage();
-       stage.setTitle("Add Song Window");
-       stage.setScene(new Scene(root1));
-       stage.show();
- 
-          
-        
+
+    @FXML
+    public void handleOnButtonActionSong(ActionEvent event) throws IOException {
+
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("AddSongView.fxml"));
+        Parent root1 = (Parent) fxmlLoader.load();
+        Stage stage = new Stage();
+        stage.setTitle("Add Song Window");
+        stage.setScene(new Scene(root1));
+        stage.show();
+
     }
-    public void handleOnButtonActionPlaylist (ActionEvent event) throws IOException
-    {
-        
-       FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("AddPlaylistView.fxml"));
-       Parent root1 = (Parent) fxmlLoader.load();
-       Stage stage = new Stage();
-       stage.setTitle("Add Playlist Window");
-       stage.setScene(new Scene(root1));
-       stage.show(); 
-        
+
+    public void handleOnButtonActionPlaylist(ActionEvent event) throws IOException {
+
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("AddPlaylistView.fxml"));
+        Parent root1 = (Parent) fxmlLoader.load();
+        Stage stage = new Stage();
+        stage.setTitle("Add Playlist Window");
+        stage.setScene(new Scene(root1));
+        stage.show();
+
+    }
+
+    @FXML
+    private void playSongButton() {
+        sm.playSong();
+    }
+
+    @FXML
+    private void pauseSongButton() {
+        sm.pauseSong();
+    }
+
+    @FXML
+    private void handleVolumeSlider(MouseEvent event) {
+        if (event.isPrimaryButtonDown()) {
+            sm.getMediaPlayer().setVolume(volumeSlider.getValue() / 100);
+        }
     }
 
     @FXML
     private void initialize(MouseEvent event) {
     }
-    
-    public void closeApp(ActionEvent event)
-    {
+
+    public void closeApp(ActionEvent event) {
         Platform.exit();
     }
-    
-    
+
 }

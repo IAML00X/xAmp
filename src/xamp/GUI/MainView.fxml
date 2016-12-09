@@ -14,7 +14,7 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" accessibleRole="BUTTON" prefHeight="752.0" prefWidth="990.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="xamp.GUI.MainViewController">
+<AnchorPane id="AnchorPane" accessibleRole="BUTTON" prefHeight="752.0" prefWidth="990.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="xamp.GUI.MainViewController">
    <children>
       <Button fx:id="addPlaylist" layoutX="24.0" layoutY="688.0" mnemonicParsing="false" onAction="#handleOnButtonActionPlaylist" prefHeight="31.0" prefWidth="83.0" text="New">
          <textFill>
@@ -145,7 +145,7 @@
             </LinearGradient>
          </textFill>
       </Label>
-      <Slider fx:id="volumeSlider" layoutX="84.0" layoutY="82.0" prefHeight="18.0" prefWidth="159.0" />
+      <Slider fx:id="volumeSlider" layoutX="84.0" layoutY="82.0" onMouseDragged="#handleVolumeSlider" prefHeight="18.0" prefWidth="159.0" />
       <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="56.0" layoutY="81.0">
          <image>
             <Image url="@sound2.png" />
@@ -166,7 +166,7 @@
             <Image url="@playlist%20icon.png" />
          </image>
       </ImageView>
-      <Label fx:id="playButton" layoutX="125.0" layoutY="7.0" onMouseClicked="#initialize" prefHeight="70.0" prefWidth="70.0">
+      <Label fx:id="playButton" layoutX="125.0" layoutY="7.0" onMouseClicked="#playSongButton" prefHeight="70.0" prefWidth="70.0">
          <graphic>
             <ImageView fitHeight="70.0" fitWidth="70.0">
                <image>
@@ -184,7 +184,7 @@
          </graphic>
       </Label>
       <Label fx:id="searchButton" layoutX="970.0" layoutY="33.0" onMouseClicked="#srcBtnClicked" />
-      <Label fx:id="fastFrwButton" layoutX="244.0" layoutY="25.0" onMouseClicked="#initialize">
+      <Label fx:id="fastFrwButton" layoutX="244.0" layoutY="25.0" onMouseClicked="#pauseSongButton">
          <graphic>
             <ImageView fitHeight="35.0" fitWidth="35.0">
                <image>
