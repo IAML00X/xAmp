@@ -15,14 +15,25 @@ import javafx.scene.media.MediaPlayer;
  * @author IAMLUX
  */
 public class SongManager {
+    
+    MediaPlayer player;
 
-    public void testPlay() {
+    public void playSong() {
 
         String musicFileName = "test.mp3";
         Media sound = new Media(new File(musicFileName).toURI().toString());
         Media song = new Media(Paths.get(musicFileName).toUri().toString());
-        MediaPlayer mediaPlayer = new MediaPlayer(sound);
+        player = new MediaPlayer(sound);
 
-        mediaPlayer.play();
+        player.play();
+    }
+    
+    public void pauseSong() {
+        player.pause();
+        
+    }
+    
+    public MediaPlayer getMediaPlayer() {
+        return player;
     }
 }
